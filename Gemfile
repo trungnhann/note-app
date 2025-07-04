@@ -52,5 +52,5 @@ group :development, :test do
   gem 'rubocop-performance', '~> 1.19', require: false
   gem 'rubocop-rails', '~> 2.22', require: false
   gem 'rubocop-rails-omakase', require: false
-  gem 'rubocop-rspec', '~> 2.25', require: false
+  gem 'rubocop-rspec', '~> 3.6', require: false
 end
