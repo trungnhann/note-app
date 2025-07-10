@@ -1,0 +1,13 @@
+vi:
+  auth:
+    password:
+      too_short: "Mật khẩu phải có ít nhất 8 ký tự"
+      no_uppercase: "Mật khẩu phải có ít nhất một chữ cái viết hoa"
+    signup:
+      success: "Đăng ký thành công"
+      failure: "Đăng ký thất bại"
+    login:
+      success: "Đăng nhập thành công"
+      failure: "Đăng nhập thất bại"
+      email_blank: "Email không được để trống"
+      invalid_credentials: "Email hoặc mật khẩu không chính xác"

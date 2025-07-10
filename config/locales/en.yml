@@ -29,3 +29,13 @@
 
 en:
   hello: "Hello world"
+  auth:
+    password:
+      too_short: "Password must be at least 8 characters"
+      no_uppercase: "Password must contain at least one uppercase letter"
+    signup:
+      success: "Registration successful"
+      failure: "Registration failed"
+    login:
+      success: "Login successful"
+      failure: "Login failed"

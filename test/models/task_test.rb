@@ -17,7 +17,7 @@
 #  index_tasks_on_project_id  (project_id)
 #
 
-require "test_helper"
+require 'test_helper'
 
 class TaskTest < ActiveSupport::TestCase
   # test "the truth" do
