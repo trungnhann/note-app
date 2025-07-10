@@ -3,17 +3,23 @@ module Api
     class BaseController < ApplicationController
       rescue_from ActiveRecord::RecordNotFound, with: :handle_not_found
       rescue_from ActionController::ParameterMissing, with: :handle_bad_request
+      rescue_from Pundit::NotAuthorizedError, with: :handle_unauthorized
+
+      include Pundit::Authorization
+      include JwtAuthenticatable
 
       private
 
       def handle_not_found(exception)
-        Rails.logger.warn "API Record Not Found: #{exception.message}"
         render_error('The requested resource was not found', :not_found, errors: [exception.message])
       end
 
       def handle_bad_request(exception)
-        Rails.logger.warn "API Bad Request: #{exception.message}"
         render_error('Required parameters are missing or invalid', status: :bad_request, error: exception.message)
+      end
+
+      def handle_unauthorized
+        render_error('You are not authorized to perform this action', :forbidden)
       end
 
       def render_success(data = {}, message = 'Success', status = :ok)

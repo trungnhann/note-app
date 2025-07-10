@@ -23,6 +23,8 @@ class User < ApplicationRecord
   normalizes :email, with: ->(email) { email.strip.downcase }
   normalizes :first_name, :last_name, with: ->(value) { value.strip.presence }
 
+  has_many :projects, dependent: :destroy
+
   def generate_jwt
     payload = {
       id: id,
