@@ -1,6 +1,8 @@
 module Api
   module V1
     class AuthController < BaseController
+      skip_before_action :authenticate_user, only: %i[login signup]
+
       def signup
         password_errors = validate_password(params[:user][:password])
         if password_errors.any?

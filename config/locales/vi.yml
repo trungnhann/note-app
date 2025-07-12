@@ -1,4 +1,22 @@
 vi:
+  projects:
+    create:
+      success: "Tạo dự án thành công"
+      failure: "Không thể tạo dự án"
+      validation_failed: "Dữ liệu dự án không hợp lệ"
+    list:
+      success: "Lấy danh sách dự án thành công"
+    show:
+      success: "Lấy thông tin dự án thành công"
+      not_found: "Không tìm thấy dự án"
+    update:
+      success: "Cập nhật dự án thành công"
+      failure: "Không thể cập nhật dự án"
+      validation_failed: "Dữ liệu dự án không hợp lệ"
+      not_found: "Không tìm thấy dự án"
+    delete:
+      success: "Xóa dự án thành công"
+      not_found: "Không tìm thấy dự án"
   auth:
     password:
       too_short: "Mật khẩu phải có ít nhất 8 ký tự"
@@ -11,3 +29,10 @@ vi:
       failure: "Đăng nhập thất bại"
       email_blank: "Email không được để trống"
       invalid_credentials: "Email hoặc mật khẩu không chính xác"
+  errors:
+    not_found: "Không tìm thấy tài nguyên yêu cầu"
+    bad_request: "Tham số bị thiếu hoặc không hợp lệ"
+    unauthorized: "Bạn không có quyền thực hiện hành động này"
+    default: "Lỗi"
+  success:
+    default: "Thành công"

@@ -11,18 +11,18 @@ module Api
       private
 
       def handle_not_found(exception)
-        render_error('The requested resource was not found', :not_found, errors: [exception.message])
+        render_error(I18n.t('errors.not_found'), :not_found, errors: [exception.message])
       end
 
       def handle_bad_request(exception)
-        render_error('Required parameters are missing or invalid', status: :bad_request, error: exception.message)
+        render_error(I18n.t('errors.bad_request'), status: :bad_request, error: exception.message)
       end
 
       def handle_unauthorized
-        render_error('You are not authorized to perform this action', :forbidden)
+        render_error(I18n.t('errors.unauthorized'), :forbidden)
       end
 
-      def render_success(data = {}, message = 'Success', status = :ok)
+      def render_success(data = {}, message = I18n.t('success.default'), status = :ok)
         render json: {
           success: true,
           message: message,
@@ -30,7 +30,7 @@ module Api
         }, status: status
       end
 
-      def render_error(message = 'Error', status = :bad_request, errors = {})
+      def render_error(message = I18n.t('errors.default'), status = :bad_request, errors = {})
         render json: {
           success: false,
           message: message,
