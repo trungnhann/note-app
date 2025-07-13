@@ -36,3 +36,33 @@ vi:
     default: "Lỗi"
   success:
     default: "Thành công"
+  tasks:
+    create:
+      success: "Tạo công việc thành công"
+      failure: "Không thể tạo công việc"
+      validation_failed: "Dữ liệu công việc không hợp lệ"
+      project_not_found: "Không tìm thấy dự án"
+      unauthorized: "Bạn không có quyền tạo công việc trong dự án này"
+    list:
+      success: "Lấy danh sách công việc thành công"
+      project_not_found: "Không tìm thấy dự án"
+      unauthorized: "Bạn không có quyền xem công việc trong dự án này"
+    show:
+      success: "Lấy thông tin công việc thành công"
+      not_found: "Không tìm thấy công việc"
+      unauthorized: "Bạn không có quyền xem công việc này"
+    update:
+      success: "Cập nhật công việc thành công"
+      failure: "Không thể cập nhật công việc"
+      validation_failed: "Dữ liệu công việc không hợp lệ"
+      not_found: "Không tìm thấy công việc"
+      unauthorized: "Bạn không có quyền cập nhật công việc này"
+    delete:
+      success: "Xóa công việc thành công"
+      not_found: "Không tìm thấy công việc"
+      unauthorized: "Bạn không có quyền xóa công việc này"
+    toggle:
+      success: "Chuyển đổi trạng thái công việc thành công"
+      validation_failed: "Không thể chuyển đổi trạng thái công việc"
+      not_found: "Không tìm thấy công việc"
+      unauthorized: "Bạn không có quyền cập nhật công việc này"

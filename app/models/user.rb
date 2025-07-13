@@ -24,6 +24,7 @@ class User < ApplicationRecord
   normalizes :first_name, :last_name, with: ->(value) { value.strip.presence }
 
   has_many :projects, dependent: :destroy
+  has_many :tasks, through: :projects
 
   def generate_jwt
     payload = {

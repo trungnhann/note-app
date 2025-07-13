@@ -1,27 +1,33 @@
 class TaskPolicy < ApplicationPolicy
   def index?
-    record.project.user_id == user.id
+    owner?
   end
 
   def show?
-    record.project.user_id == user.id
+    owner?
   end
 
   def create?
-    record.project.user_id == user.id
+    owner?
   end
 
   def update?
-    record.project.user_id == user.id
+    owner?
   end
 
   def destroy?
-    record.project.user_id == user.id
+    owner?
   end
 
   class Scope < Scope
     def resolve
-      scope.joins(:project).where(projects: { user_id: user.id })
+      scope.includes(:project).where(projects: { user_id: user.id })
     end
+  end
+
+  private
+
+  def owner?
+    record.user == user
   end
 end

@@ -8,9 +8,8 @@ Rails.application.routes.draw do
       post 'auth/signup', to: 'auth#signup'
       post 'auth/login', to: 'auth#login'
 
-      resources :projects do
-        resources :tasks
-      end
+      resources :projects
+      resources :tasks
     end
   end
 end

@@ -19,7 +19,8 @@
 #
 
 class Task < ApplicationRecord
-  belongs_to :project, optional: true
+  belongs_to :project
+  delegate :user, to: :project
 
   validates :title, presence: true
 
