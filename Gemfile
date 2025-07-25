@@ -49,7 +49,7 @@ group :development, :test do
   gem 'brakeman', require: false
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
-  gem 'rubocop', '~> 1.78', require: false
+  gem 'rubocop', '~> 1.79', require: false
   gem 'rubocop-capybara', '~> 2.19', require: false
   gem 'rubocop-factory_bot', '~> 2.24', require: false
   gem 'rubocop-performance', '~> 1.19', require: false
